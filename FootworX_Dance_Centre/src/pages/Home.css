@@ -1,111 +1,181 @@
-.home {
-  width: 100%;
+.home-container.dark-theme {
+  background-color: #000;
+  color: #fff;
+  overflow-x: hidden;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 5%;
 }
 
-/* Intro Section */
-.intro {
+/* Philosophy Section: Asymmetric Layout */
+.philosophy-section {
   padding: 100px 0;
-  text-align: center;
-  background-color: #ffffff;
-}
-
-.subtitle {
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  font-size: 0.75rem;
-  color: #ff004f;
-  font-weight: 700;
-  display: block;
-  margin-bottom: 20px;
-}
-
-.intro h2 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  font-family: 'Playfair Display', serif;
-  margin-bottom: 30px;
-  color: #1a1a1a;
-}
-
-.intro p {
-  max-width: 700px;
-  margin: 0 auto;
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #666;
-}
-
-/* Styles Preview Grid */
-.styles-preview {
-  display: flex;
-  flex-wrap: wrap;
-  height: 60vh;
-  background: #000;
-}
-
-.style-item {
-  flex: 1;
-  min-width: 300px;
-  border: 1px solid rgba(255,255,255,0.1);
-  display: flex;
-  align-items: flex-end;
-  padding: 40px;
-  transition: 0.5s ease;
-  cursor: pointer;
   position: relative;
 }
 
-.style-item:hover {
-  flex: 1.5;
-  background: #ff004f; /* Accent color on hover */
+.grid-layout {
+  display: grid;
+  grid-template-columns: 100px 1.5fr 1fr;
+  gap: 40px;
+  align-items: center;
 }
 
-.style-info h3 {
-  color: #fff;
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  text-transform: uppercase;
+.vertical-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-weight: 900;
+  font-size: 0.8rem;
+  letter-spacing: 10px;
+  color: #333; /* Subdued established date */
 }
 
-.style-info p {
-  color: rgba(255,255,255,0.7);
-  font-size: 0.9rem;
+.glitch-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(4rem, 10vw, 8rem);
+  line-height: 0.85;
+  margin: 20px 0;
+  letter-spacing: -4px;
 }
 
-/* Location Callout */
-.location-callout {
-  padding: 80px 20px;
-  background: #f9f9f9;
+.description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #aaa;
+  max-width: 450px;
+  border-left: 2px solid #ff004f;
+  padding-left: 30px;
+}
+
+/* Updated Image Styling */
+.feature-image-box {
+  width: 100%;
+  position: relative;
   display: flex;
   justify-content: center;
+  perspective: 1000px; /* Essential for the 3D hover effect */
 }
 
-.location-box {
-  background: #fff;
-  padding: 40px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
-  text-align: center;
-  max-width: 500px;
+.feature-silhouette {
   width: 100%;
+  height: auto;
+  max-height: 700px;
+  object-fit: cover;
+  /* Premium finish filters */
+  filter: contrast(1.1) brightness(0.9) grayscale(1); 
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease;
 }
 
-.location-box h4 {
-  font-size: 1.2rem;
+.feature-image-box:hover .feature-silhouette {
+  transform: scale(1.05) rotateY(-8deg); /* The "High Profile" tilt */
+  filter: contrast(1.2) brightness(1) grayscale(0); /* Pops into color or higher contrast on hover */
+}
+
+/* Styles Explorer: Horizontal Impact */
+.styles-explorer {
+  padding: 80px 0;
+  background: #050505;
+}
+
+.styles-ticker {
+  display: flex;
+  overflow-x: auto;
+  gap: 60px;
+  padding: 40px 5%;
+  border-top: 1px solid #1a1a1a;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.styles-ticker::-webkit-scrollbar { display: none; }
+
+.ticker-item {
+  display: flex;
+  flex-direction: column;
+  min-width: fit-content;
+}
+
+.ticker-num {
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: #ff004f;
   margin-bottom: 10px;
 }
 
-.map-link {
-  display: inline-block;
-  margin-top: 20px;
-  text-decoration: none;
-  color: #000;
-  font-weight: 800;
-  font-size: 0.8rem;
+.ticker-text {
+  font-size: 3rem;
+  font-weight: 900;
   text-transform: uppercase;
-  border-bottom: 2px solid #ff004f;
+  letter-spacing: -1px;
+  transition: 0.3s ease;
+}
+
+.ticker-text:hover {
+  -webkit-text-stroke: 1px #fff;
+  color: transparent;
+  cursor: pointer;
+}
+
+/* Contact Strip */
+.contact-strip {
+  padding: 60px 5%;
+  background: #fff;
+  color: #000;
+}
+
+.strip-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.strip-content p {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.strip-content span {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.minimal-cta {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 20px 40px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.minimal-cta:hover {
+  background: #ff004f;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 1024px) {
+  .grid-layout {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .vertical-text {
+    display: none;
+  }
+  
+  .description {
+    margin: 0 auto;
+    border-left: none;
+    border-bottom: 2px solid #ff004f;
+    padding-left: 0;
+    padding-bottom: 20px;
+  }
 }
