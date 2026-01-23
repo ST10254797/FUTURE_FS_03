@@ -1,0 +1,111 @@
+.home {
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Intro Section */
+.intro {
+  padding: 100px 0;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.subtitle {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 0.75rem;
+  color: #ff004f;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.intro h2 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 30px;
+  color: #1a1a1a;
+}
+
+.intro p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #666;
+}
+
+/* Styles Preview Grid */
+.styles-preview {
+  display: flex;
+  flex-wrap: wrap;
+  height: 60vh;
+  background: #000;
+}
+
+.style-item {
+  flex: 1;
+  min-width: 300px;
+  border: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  align-items: flex-end;
+  padding: 40px;
+  transition: 0.5s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.style-item:hover {
+  flex: 1.5;
+  background: #ff004f; /* Accent color on hover */
+}
+
+.style-info h3 {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.style-info p {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.9rem;
+}
+
+/* Location Callout */
+.location-callout {
+  padding: 80px 20px;
+  background: #f9f9f9;
+  display: flex;
+  justify-content: center;
+}
+
+.location-box {
+  background: #fff;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+}
+
+.location-box h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.map-link {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #000;
+  font-weight: 800;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  border-bottom: 2px solid #ff004f;
+}
