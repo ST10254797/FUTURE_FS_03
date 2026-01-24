@@ -35,7 +35,7 @@ const About = () => {
           </div>
           <div className="studio-image-box">
              {/* Replace with a photo of your actual studio interior */}
-             <img src="/studio_interior.jpg" alt="FootworX Studio" className="studio-img" />
+             <img src="/studio.jpg" alt="FootworX Studio" className="studio-img" />
           </div>
         </div>
       </section>
