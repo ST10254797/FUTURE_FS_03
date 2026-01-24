@@ -1,116 +1,159 @@
 .about-container {
   background-color: #000;
   color: #fff;
-  padding-top: 100px; /* Space for Navbar */
+  overflow-x: hidden;
 }
 
-/* Hero Section */
-.about-hero {
-  padding: 100px 0;
-  text-align: center;
-}
-
-.eyebrow {
-  color: #ff004f;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  font-weight: 800;
-  font-size: 0.8rem;
-  display: block;
-  margin-bottom: 20px;
-}
-
-.large-lead {
-  font-size: 1.5rem;
-  color: #888;
-  max-width: 800px;
-  margin: 40px auto 0;
-  line-height: 1.6;
-}
-
-/* Studio Feature Grid */
-.grid-2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
+/* Cinematic Hero */
+.about-hero-v2 {
+  height: 80vh;
+  display: flex;
   align-items: center;
-  padding: 100px 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.8), #000), url('/home_page_photo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Parallax effect */
 }
 
-.studio-info h2 {
-  font-size: 3.5rem;
+.outline-title {
+  font-size: clamp(4rem, 12vw, 10rem);
+  -webkit-text-stroke: 1px #fff;
+  color: transparent;
+  line-height: 0.8;
+  letter-spacing: -2px;
+}
+
+.solid-title {
+  font-size: clamp(4rem, 12vw, 10rem);
+  line-height: 0.8;
   margin-bottom: 30px;
 }
 
-.studio-info p {
-  color: #aaa;
-  line-height: 1.8;
-  margin-bottom: 30px;
+.hero-description {
+  max-width: 600px;
+  font-size: 1.2rem;
+  color: #888;
+  border-left: 3px solid #ff004f;
+  padding-left: 20px;
 }
 
-.feature-list {
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 0.9rem;
-}
-
-.feature-list li {
-  margin-bottom: 15px;
+/* Stats Bar */
+.stats-bar {
+  background: #ff004f;
+  padding: 60px 0;
   color: #fff;
 }
 
-.studio-img {
+.stats-flex {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.stat-num {
+  display: block;
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.stat-label {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+/* Studio Experience Section */
+.split-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+  padding: 150px 0;
+  align-items: center;
+}
+
+.image-stack {
+  position: relative;
+}
+
+.main-img {
   width: 100%;
-  aspect-ratio: 16/9;
-  object-fit: cover;
+  position: relative;
+  z-index: 2;
   filter: grayscale(1);
-  border: 1px solid #222;
-  transition: 0.5s ease;
+  transition: 0.5s;
 }
 
-.studio-img:hover {
+.accent-box {
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #ff004f;
+  z-index: 1;
+}
+
+.image-stack:hover .main-img {
   filter: grayscale(0);
+  transform: translate(15px, 15px);
 }
 
-/* Values Grid */
-.values-section {
-  padding: 100px 0;
-  background: #050505;
+.section-title span {
+  color: #ff004f;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
 
-.values-grid {
+.feature-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.f-item {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.f-item span { color: #ff004f; margin-right: 10px; }
+
+/* Values Modern */
+.values-modern { padding-bottom: 150px; }
+
+.values-header h2 { font-size: 3rem; text-align: center; }
+.line { width: 80px; height: 4px; background: #ff004f; margin: 20px auto 60px; }
+
+.values-cards-v2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  gap: 30px;
 }
 
-.value-card {
-  padding: 60px 40px;
-  border: 1px solid #111;
-  text-align: center;
-  transition: 0.3s;
-}
-
-.value-card:hover {
-  border-color: #ff004f;
+.v-card {
   background: #0a0a0a;
+  padding: 60px 40px;
+  position: relative;
+  border: 1px solid #111;
+  transition: 0.4s;
 }
 
-.value-card h3 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-}
+.v-card:hover { border-color: #ff004f; background: #000; }
 
-.value-card p {
-  color: #666;
-  font-size: 0.9rem;
+.v-num {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 3rem;
+  font-weight: 900;
+  color: #1a1a1a;
 }
 
 /* Responsive */
 @media (max-width: 900px) {
-  .grid-2, .values-grid {
-    grid-template-columns: 1fr;
-  }
+  .split-layout, .values-cards-v2, .stats-flex { grid-template-columns: 1fr; flex-direction: column; gap: 50px; }
+  .stat-item { margin-bottom: 30px; }
 }

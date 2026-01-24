@@ -4,57 +4,84 @@ import './About.css';
 const About = () => {
   return (
     <div className="about-container dark-theme">
-      {/* SECTION 1: THE LEGACY */}
-      <section className="about-hero">
+      {/* SECTION 1: CINEMATIC HERO */}
+      <section className="about-hero-v2">
         <div className="container">
-          <span className="eyebrow">The FootworX Story</span>
-          <h1 className="display-title">13 Years of <br/>Technical Excellence.</h1>
-          <p className="large-lead">
-            Founded in 2011, FootworX Dance Centre has become Ballito’s premier 
-            destination for dancers who demand more from their training.
-          </p>
-        </div>
-      </section>
-
-      {/* SECTION 2: THE STUDIO (RICHARD PARK) */}
-      <section className="studio-feature">
-        <div className="container grid-2">
-          <div className="studio-info">
-            <h2 className="section-title">The Facility</h2>
-            <p>
-              Located in the heart of Ballito at <strong>Richard Park</strong>, our 
-              studios are designed with professional-grade sprung flooring, full-length 
-              mirrors, and climate control to provide an optimal environment for growth.
+          <div className="hero-content">
+            <span className="eyebrow fade-in">Since 2011</span>
+            <h1 className="outline-title">LEGACY IN</h1>
+            <h1 className="solid-title">MOTION.</h1>
+            <p className="hero-description">
+              FootworX is more than a studio; it is a technical powerhouse in Ballito, 
+              where discipline meets the raw emotion of dance.
             </p>
-            <ul className="feature-list">
-              <li>— Professional Sprung Floors</li>
-              <li>— Sound-Engineered Studios</li>
-              <li>— Parent Lounge & Viewing Areas</li>
-              <li>— Safe, Secure Parking</li>
-            </ul>
-          </div>
-          <div className="studio-image-box">
-             {/* Replace with a photo of your actual studio interior */}
-             <img src="/studio.jpg" alt="FootworX Studio" className="studio-img" />
           </div>
         </div>
       </section>
 
-      {/* SECTION 3: CORE VALUES */}
-      <section className="values-section">
+      {/* SECTION 2: THE LEGACY STATS */}
+      <section className="stats-bar">
+        <div className="container stats-flex">
+          <div className="stat-item">
+            <span className="stat-num">13+</span>
+            <span className="stat-label">Years of Excellence</span>
+          </div>
+          <div className="stat-item">
+            <span className="stat-num">5</span>
+            <span className="stat-label">Core Disciplines</span>
+          </div>
+          <div className="stat-item">
+            <span className="stat-num">1</span>
+            <span className="stat-label">State-of-the-Art Studio</span>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 3: THE STUDIO EXPERIENCE */}
+      <section className="studio-experience">
+        <div className="container split-layout">
+          <div className="image-stack">
+            <img src="/studio.jpg" alt="FootworX Facility" className="main-img" />
+            <div className="accent-box"></div>
+          </div>
+          <div className="experience-text">
+            <h2 className="section-title">Richard Park <br/><span>Professional Facility</span></h2>
+            <p>
+              Our Richard Park location is meticulously designed for high-performance training. 
+              From the acoustics to the impact-absorbing floors, every detail serves the dancer.
+            </p>
+            <div className="feature-grid">
+              <div className="f-item"><span>//</span> Professional Sprung Floors</div>
+              <div className="f-item"><span>//</span> Full-Length Performance Mirrors</div>
+              <div className="f-item"><span>//</span> Climate-Controlled Environment</div>
+              <div className="f-item"><span>//</span> Parent Viewing Lounge</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 4: THE VALUES (MODERN CARDS) */}
+      <section className="values-modern">
         <div className="container">
-          <div className="values-grid">
-            <div className="value-card">
-              <h3>Discipline</h3>
-              <p>The foundation of every great performer starts with technical rigour.</p>
+          <div className="values-header">
+            <h2>The FootworX Way</h2>
+            <div className="line"></div>
+          </div>
+          <div className="values-cards-v2">
+            <div className="v-card">
+              <div className="v-num">01</div>
+              <h3>DISCIPLINE</h3>
+              <p>We believe technique is the key to freedom. Our students learn the "why" behind every move.</p>
             </div>
-            <div className="value-card">
-              <h3>Community</h3>
-              <p>A supportive environment where passion is shared across all ages.</p>
+            <div className="v-card">
+              <div className="v-num">02</div>
+              <h3>COMMUNITY</h3>
+              <p>Ballito's dance family. We grow together, supporting every leap and every fall.</p>
             </div>
-            <div className="value-card">
-              <h3>Artistry</h3>
-              <p>Beyond the steps, we teach the soul of movement.</p>
+            <div className="v-card">
+              <div className="v-num">03</div>
+              <h3>ARTISTRY</h3>
+              <p>Technical perfection is just the start. We teach dancers how to move an audience.</p>
             </div>
           </div>
         </div>
