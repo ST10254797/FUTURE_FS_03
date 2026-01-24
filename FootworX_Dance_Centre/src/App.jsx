@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About'; 
 import Disciplines from './pages/Disciplines'; // Updated import
+import Gallery from './pages/Gallery';
 import './App.css';
 
 function App() {
@@ -19,6 +20,10 @@ function App() {
             
             {/* The new Disciplines route */}
             <Route path="/disciplines" element={<Disciplines />} />
+
+            <Route path ="/gallery" element={<Gallery />} />
+            
+            {/* Fallback route to Home for undefined paths */}
             
             <Route path="*" element={<Home />} />
           </Routes>
