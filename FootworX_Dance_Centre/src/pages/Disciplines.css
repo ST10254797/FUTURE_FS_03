@@ -1,0 +1,64 @@
+.disciplines-page {
+  background: #000;
+  color: #fff;
+  padding-top: 120px;
+}
+
+.disciplines-header {
+  padding: 60px 0;
+}
+
+.accent-text {
+  color: #ff004f;
+  font-weight: 800;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.huge-title {
+  font-size: clamp(4rem, 12vw, 10rem);
+  line-height: 0.9;
+  letter-spacing: -5px;
+  margin-top: 20px;
+}
+
+.style-block {
+  padding: 80px 0;
+  border-bottom: 1px solid #222;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.style-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.style-index {
+  font-size: 0.8rem;
+  color: #ff004f;
+  font-weight: 800;
+  margin-top: 10px;
+}
+
+.style-header h2 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+.style-info {
+  max-width: 400px;
+  color: #888;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .style-block {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

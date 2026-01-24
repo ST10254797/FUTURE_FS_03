@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
-import About from './pages/About'; // 1. Import the About page
+import About from './pages/About'; 
+import Disciplines from './pages/Disciplines'; // Updated import
 import './App.css';
 
 function App() {
@@ -14,11 +15,11 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
-            
-            {/* 2. Add the About route */}
             <Route path="/about" element={<About />} />
             
-            {/* Fallback to Home for any other link */}
+            {/* The new Disciplines route */}
+            <Route path="/disciplines" element={<Disciplines />} />
+            
             <Route path="*" element={<Home />} />
           </Routes>
         </main>
