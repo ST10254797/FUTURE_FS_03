@@ -17,10 +17,13 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
-        <Link to="/" className="nav-logo">
-          {/* Using the logo you provided - make sure it's in your public folder */}
-          <img src="/logo.png" alt="FootworX Dance Centre" />
-        </Link>
+<Link to="/" className="nav-logo">
+  <img src="/logo.png" alt="FootworX Logo" />
+  <div className="logo-text">
+    <span className="brand-name">FOOTWORX</span>
+    <span className="brand-sub">DANCE CENTRE</span>
+  </div>
+</Link>
 
         <ul className="nav-links">
           <li><Link to="/">Home</Link></li>

@@ -5,16 +5,16 @@
   width: 100%;
   z-index: 1000;
   padding: 30px 0;
-  transition: all 0.4s ease;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   background: transparent;
 }
 
 /* Glass effect when scrolling */
 .navbar.scrolled {
   padding: 15px 0;
-  background: rgba(0, 0, 0, 0.85);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .nav-container {
@@ -26,49 +26,88 @@
   padding: 0 5%;
 }
 
-.nav-logo img {
-  height: 50px; /* Adjust based on your logo's aspect ratio */
-  width: auto;
-  filter: brightness(0) invert(1); /* Forces logo to be pure white */
-  transition: height 0.4s ease;
+/* New Logo + Text Wrapper */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
 }
 
+.nav-logo img {
+  height: 60px;
+  width: auto;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.1));
+  transition: all 0.4s ease;
+}
+
+/* Logo Typography Styles */
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.brand-name {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 900;
+  letter-spacing: 2.5px;
+  transition: all 0.4s ease;
+}
+
+.brand-sub {
+  color: #ff004f; /* FootworX Accent Pink */
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  margin-top: 4px;
+}
+
+/* Handle Scrolling States for Logo and Text */
 .navbar.scrolled .nav-logo img {
   height: 40px;
 }
 
+.navbar.scrolled .brand-name {
+  font-size: 1.1rem;
+}
+
 .nav-links {
   display: flex;
-  gap: 40px;
+  gap: 45px;
   list-style: none;
+  align-items: center;
 }
 
 .nav-links a {
   color: #fff;
   text-decoration: none;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 2.5px;
   position: relative;
-  opacity: 0.7;
-  transition: 0.3s;
+  opacity: 0.6;
+  transition: 0.3s ease;
 }
 
 .nav-links a:hover {
   opacity: 1;
+  color: #ff004f;
 }
 
-/* Small animated line under links */
+/* Underline Animation */
 .nav-links a::after {
   content: '';
   position: absolute;
-  bottom: -5px;
-  left: 0;
+  bottom: -8px;
+  left: 50%;
   width: 0%;
-  height: 2px;
+  height: 1px;
   background: #ff004f;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
 }
 
 .nav-links a:hover::after {
@@ -78,21 +117,29 @@
 .nav-cta {
   background: #fff;
   color: #000;
-  padding: 12px 25px;
-  font-size: 0.75rem;
-  font-weight: 800;
+  padding: 12px 28px;
+  font-size: 0.7rem;
+  font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  border-radius: 0px; /* Sharp corners for elite look */
-  transition: 0.3s;
+  letter-spacing: 2px;
+  border-radius: 0px; 
+  transition: all 0.3s ease;
+  border: 1px solid #fff;
 }
 
 .nav-cta:hover {
-  background: #ff004f;
+  background: transparent;
   color: #fff;
+  border-color: #ff004f;
 }
 
-/* Mobile: Simple hide for now */
-@media (max-width: 768px) {
-  .nav-links { display: none; }
+/* Mobile Adjustments */
+@media (max-width: 1100px) {
+  .nav-links { gap: 25px; }
+  .brand-name { font-size: 1.1rem; }
+}
+
+@media (max-width: 850px) {
+  .nav-links, .nav-cta { display: none; }
+  .navbar { padding: 15px 0; }
 }
