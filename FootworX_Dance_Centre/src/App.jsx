@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import About from './pages/About'; 
 import Disciplines from './pages/Disciplines'; // Updated import
 import Gallery from './pages/Gallery';
+import Enroll from './pages/Enroll';
 import './App.css';
 
 function App() {
@@ -22,6 +23,8 @@ function App() {
             <Route path="/disciplines" element={<Disciplines />} />
 
             <Route path ="/gallery" element={<Gallery />} />
+
+            <Route path="/enroll" element={<Enroll />} />
             
             {/* Fallback route to Home for undefined paths */}
             

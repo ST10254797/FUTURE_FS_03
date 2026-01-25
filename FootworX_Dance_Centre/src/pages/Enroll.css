@@ -1,0 +1,156 @@
+.enroll-page {
+  background: #000;
+  min-height: 100vh;
+  padding: 160px 0 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.enroll-container {
+  max-width: 1100px;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+}
+
+/* Info Side */
+.enroll-info .section-title {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 0.9;
+  font-weight: 900;
+  margin: 20px 0;
+}
+
+.eyebrow {
+  color: #ff004f;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
+.enroll-lead {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 40px;
+}
+
+.enroll-check {
+  list-style: none;
+  padding: 0;
+}
+
+.enroll-check li {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.enroll-check li span {
+  color: #ff004f;
+  margin-right: 15px;
+}
+
+/* Form Side */
+.enroll-form-wrapper {
+  background: #080808;
+  padding: 50px;
+  border: 1px solid #111;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+}
+
+label {
+  display: block;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+input, select, textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #222;
+  padding: 12px 0;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #ff004f;
+}
+
+textarea {
+  height: 60px;
+  resize: none;
+}
+
+.submit-enroll {
+  width: 100%;
+  background: #ff004f;
+  color: #fff;
+  border: none;
+  padding: 22px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.submit-enroll:hover {
+  background: #25D366; /* WhatsApp Green on hover */
+  transform: translateY(-3px);
+}
+
+/* Success State */
+.enroll-success {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.display-title span {
+  -webkit-text-stroke: 1px #fff;
+  color: transparent;
+}
+
+.back-btn {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 15px 40px;
+  margin-top: 30px;
+  text-transform: uppercase;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .enroll-container { grid-template-columns: 1fr; }
+  .enroll-form-wrapper { padding: 30px; }
+}
