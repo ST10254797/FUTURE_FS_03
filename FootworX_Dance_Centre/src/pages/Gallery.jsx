@@ -9,13 +9,13 @@ const Gallery = () => {
   // Background Story & Data
   const archivePhotos = [
     { id: 1, category: 'Ballet', src: 'https://images.unsplash.com/photo-1518834107812-67b0b7c58434?q=80&w=2000&auto=format&fit=crop', size: 'tall', story: 'Precision in the Ballito sunlight. Captured during the 2025 Summer Intensive.' },
-    { id: 2, category: 'Contemporary', src: 'https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=2000&auto=format&fit=crop', size: 'wide', story: 'Fluidity in motion. An exploration of gravity and emotional release.' },
-    { id: 3, category: 'Hip Hop', src: 'https://images.unsplash.com/photo-1535525153412-5a42439a210d?q=80&w=2000&auto=format&fit=crop', size: 'small', story: 'Raw energy. The rhythm of the Durban streets translated to the studio floor.' },
-    { id: 4, category: 'Modern & Jazz', src: 'https://images.unsplash.com/photo-1547153760-18fc86324498?q=80&w=2000&auto=format&fit=crop', size: 'tall', story: 'Angular dynamics and theatrical soul. Defining the Broadway aesthetic.' },
-    { id: 5, category: 'Ballet', src: 'https://images.unsplash.com/photo-1546413242-7890989047b7?q=80&w=2000&auto=format&fit=crop', size: 'small', story: 'The foundation of discipline. Every movement is a calculated masterpiece.' },
+    { id: 2, category: 'Contemporary', src: 'https://media.istockphoto.com/id/1148049091/photo/young-beautiful-dancer-dancing-on-gray-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=EYHEB_RgvV5KMLMtZ-yFVaYlEpBE7i2nY14ROOH6Qzo=', size: 'wide', story: 'Fluidity in motion. An exploration of gravity and emotional release.' },
+    { id: 3, category: 'Hip Hop', src: 'https://images.unsplash.com/photo-1535525153412-5a42439a210d?q=80&w=2000&auto=format&fit=crop', size: 'standard', story: 'Raw energy. The rhythm of the Durban streets translated to the studio floor.' },
+    { id: 4, category: 'Modern & Jazz', src: 'https://images.unsplash.com/photo-1524580477099-d6ef682e2a2c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bW9kZXJuJTIwZGFuY2V8ZW58MHx8MHx8fDA%3D', size: 'tall', story: 'Angular dynamics and theatrical soul. Defining the Broadway aesthetic.' },
+    { id: 5, category: 'Ballet', src: 'https://media.istockphoto.com/id/1135143424/photo/ballet-class-on-the-stage-of-the-theater-with-light-and-smoke-children-are-engaged-in.webp?a=1&b=1&s=612x612&w=0&k=20&c=qdkGmuwk1N1S8waqnIShDgCzxegST0OH6dSVetFUQMg=', size: 'standard', story: 'The foundation of discipline. Every movement is a calculated masterpiece.' },
     { id: 6, category: 'Hip Hop', src: 'https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?q=80&w=2000&auto=format&fit=crop', size: 'wide', story: 'Synchronized power. When the beat and the body become one architecture.' },
     { id: 7, category: 'Contemporary', src: 'https://images.unsplash.com/photo-1508807526345-15e9b5f4eaff?q=80&w=2000&auto=format&fit=crop', size: 'tall', story: 'Ethereal leaps. Exploring the silent spaces between movements.' },
-    { id: 8, category: 'Modern & Jazz', src: 'https://images.unsplash.com/photo-1504609813442-a8924e83f73e?q=80&w=2000&auto=format&fit=crop', size: 'wide', story: 'The glow of performance. Capturing the heat of the stage lights.' }
+    { id: 8, category: 'Modern & Jazz', src: 'https://images.unsplash.com/photo-1533106958148-daaeab8b83fe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG1vZGVybiUyMGRhbmNlfGVufDB8fDB8fHww', size: 'wide', story: 'The glow of performance. Capturing the heat of the stage lights.' }
   ];
 
   useEffect(() => {
@@ -63,7 +63,7 @@ const Gallery = () => {
       {/* --- FEATURED FILM STRIP --- */}
       <section className="film-strip-section reveal fade-up">
         <div className="strip-track">
-          <div className="strip-item"><img src="https://images.unsplash.com/photo-1508204882723-81a69ad73c5a?q=80&w=2000&auto=format&fit=crop" alt="f1" /></div>
+          <div className="strip-item"><img src="https://media.istockphoto.com/id/1148049091/photo/young-beautiful-dancer-dancing-on-gray-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=EYHEB_RgvV5KMLMtZ-yFVaYlEpBE7i2nY14ROOH6Qzo=" alt="f1" /></div>
           <div className="strip-item"><img src="https://images.unsplash.com/photo-1508807526345-15e9b5f4eaff?q=80&w=2000&auto=format&fit=crop" alt="f2" /></div>
           <div className="strip-item"><img src="https://images.unsplash.com/photo-1547153760-18fc86324498?q=80&w=2000&auto=format&fit=crop" alt="f3" /></div>
           <div className="strip-item"><img src="https://images.unsplash.com/photo-1518834107812-67b0b7c58434?q=80&w=2000&auto=format&fit=crop" alt="f4" /></div>
