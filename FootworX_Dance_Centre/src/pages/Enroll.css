@@ -97,6 +97,16 @@ input, select, textarea {
   transition: 0.3s;
 }
 
+select {
+  background-color: #080808;
+  color: #fff;
+}
+
+select option {
+  background-color: #080808;
+  color: #fff;
+}
+
 input:focus, select:focus, textarea:focus {
   border-color: #ff004f;
 }
