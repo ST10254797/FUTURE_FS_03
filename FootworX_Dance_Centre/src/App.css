@@ -1,9 +1,7 @@
-/* Reset default Vite centering */
 #root {
   width: 100%;
   margin: 0;
   padding: 0;
-  text-align: left; /* Dance sites look better left-aligned or custom-aligned */
 }
 
 main {
@@ -12,12 +10,30 @@ main {
   flex-direction: column;
 }
 
-/* Global transitions for page fades */
+/* Smooth page motion */
 .fade-in {
-  animation: fadeIn 0.8s ease-in;
+  animation: fadeIn 1s ease forwards;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Global button polish */
+button {
+  font-family: inherit;
+  border-radius: 999px;
+}
+
+/* Selection styling */
+::selection {
+  background: #000;
+  color: #fff;
 }

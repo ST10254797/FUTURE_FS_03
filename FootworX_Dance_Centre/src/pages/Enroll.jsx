@@ -12,8 +12,8 @@ const Enroll = () => {
     const data = Object.fromEntries(formData.entries());
     
     // 2. Format the WhatsApp Message
-    // Replace the number below with your studio's WhatsApp number (Start with 27)
-    const studioNumber = "27123456789"; 
+    // Updated to your specific number: 072 203 6428 (International format 27722036428)
+    const studioNumber = "27722036428"; 
     const text = `*NEW ENROLLMENT INQUIRY*%0A%0A` +
                  `*Student:* ${data.studentName}%0A` +
                  `*Age:* ${data.age}%0A` +
@@ -32,9 +32,10 @@ const Enroll = () => {
     return (
       <div className="enroll-success dark-theme">
         <div className="success-content">
+          <span className="eyebrow">Transmission Received</span>
           <h1 className="display-title">MESSAGE <br/><span>SENT.</span></h1>
-          <p>If your WhatsApp didn't open automatically, please contact us directly via the button below.</p>
-          <button className="back-btn" onClick={() => setSubmitted(false)}>Back to Form</button>
+          <p>We will review your technical details and contact you shortly.</p>
+          <button className="back-btn" onClick={() => setSubmitted(false)}>Return to Portal</button>
         </div>
       </div>
     );
@@ -44,25 +45,42 @@ const Enroll = () => {
     <div className="enroll-page dark-theme">
       <div className="enroll-container">
         
-        {/* LEFT SIDE: INFO */}
+        {/* LEFT SIDE: EDITORIAL INFO */}
         <div className="enroll-info">
-          <span className="eyebrow">// Step 01</span>
-          <h1 className="section-title">START YOUR <br/>JOURNEY.</h1>
-          <p className="enroll-lead">Submit your details to chat with us about class placement and availability.</p>
-          
-          <ul className="enroll-check">
-            <li><span>01.</span> Instant WhatsApp connection</li>
-            <li><span>02.</span> Professional level assessment</li>
-            <li><span>03.</span> Welcome pack & trial details</li>
-          </ul>
+          <div className="info-sticky">
+            <span className="eyebrow">// Intake Portal</span>
+            <h1 className="section-title">JOIN THE <br/>COLLECTIVE.</h1>
+            <div className="accent-line"></div>
+            <p className="enroll-lead">
+                FootworX is a technical sanctuary. Provide your metrics below to initialize 
+                your professional placement.
+            </p>
+            
+            <div className="enroll-steps">
+                <div className="step">
+                    <span className="step-num">01</span>
+                    <p>Direct technical inquiry via encrypted WhatsApp.</p>
+                </div>
+                <div className="step">
+                    <span className="step-num">02</span>
+                    <p>Syllabus assessment and age-appropriate grading.</p>
+                </div>
+                <div className="step">
+                    <span className="step-num">03</span>
+                    <p>Trial session confirmation and studio tour.</p>
+                </div>
+            </div>
+          </div>
         </div>
 
-        {/* RIGHT SIDE: FORM */}
+        {/* RIGHT SIDE: MINIMALIST FORM */}
         <div className="enroll-form-wrapper">
           <form className="enroll-form" onSubmit={handleSubmit}>
+            <div className="form-section-label">Identity Metrics</div>
+            
             <div className="form-group">
-              <label>Student Name & Surname</label>
-              <input type="text" name="studentName" required placeholder="Full Name" />
+              <label>Student Full Name</label>
+              <input type="text" name="studentName" required placeholder="Name & Surname" />
             </div>
 
             <div className="form-row">
@@ -82,19 +100,23 @@ const Enroll = () => {
               </div>
             </div>
 
+            <div className="form-section-label">Contact Architecture</div>
+
             <div className="form-group">
               <label>Parent/Guardian Email</label>
-              <input type="email" name="email" required placeholder="email@example.com" />
+              <input type="email" name="email" required placeholder="email@address.com" />
             </div>
 
             <div className="form-group">
-              <label>Previous Experience</label>
-              <textarea name="experience" placeholder="Any prior training? (Optional)"></textarea>
+              <label>Technical Background</label>
+              <textarea name="experience" placeholder="Describe prior training, or leave blank for beginners."></textarea>
             </div>
 
             <button type="submit" className="submit-enroll">
-              Open WhatsApp Chat —
+              INITIALIZE CONNECTION
+              <span className="btn-icon">→</span>
             </button>
+            <p className="form-footer-note">Securely transmits to: 072 203 6428</p>
           </form>
         </div>
 
